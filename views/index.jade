@@ -2,4 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Here's how to use it:
+
+
+  table
+    tr
+        td GET
+        td /api/people
+        td Get all users
+    tr
+        td POST
+        td /api/people
+        td Add a new user
