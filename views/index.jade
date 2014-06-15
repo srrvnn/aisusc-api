@@ -1,16 +1,60 @@
 extends layout
 
 block content
+
   h1= title
-  p Here's how to use it:
 
-
+  h2 GET all users
   table
     tr
         td GET
-        td /api/people
+        td
+          a(href='/api/people') /api/people
         td Get all users
-    tr
-        td POST
-        td /api/people
-        td Add a new user
+
+
+  h2 POST a user
+  p#postUserStatus
+  #postUser
+    fieldset
+      input#input-uscid(type='text', placeholder='USCID')
+      input#input-facebookid(type='text', placeholder='FacebookID')
+      input#input-cardid(type='text', placeholder='CardID')
+      br
+      input#input-name(type='text', placeholder='Name')
+      input#input-dob(type='text', placeholder='DOB')
+      input#input-gender(type='text', placeholder='Gender')
+      input#input-email(type='text', placeholder='Email')
+      input#input-phone(type='text', placeholder='Phone')
+      br
+      input#input-program(type='text', placeholder='Program')
+      input#input-year(type='text', placeholder='Year')
+      br
+      button#btnPostUser Add User
+
+  h2 PUT a user
+  p#putUserStatus
+  #putUser
+    fieldset
+      input#input-uscid(type='text', placeholder='Required: USCID')
+      input#input-facebookid(type='text', placeholder='FacebookID')
+      input#input-cardid(type='text', placeholder='CardID')
+      br
+      input#input-name(type='text', placeholder='Name')
+      input#input-dob(type='text', placeholder='DOB')
+      input#input-gender(type='text', placeholder='Gender')
+      input#input-email(type='text', placeholder='Email')
+      input#input-phone(type='text', placeholder='Phone')
+      br
+      input#input-program(type='text', placeholder='Program')
+      input#input-year(type='text', placeholder='Year')
+      br
+      button#btnGetUser Get User
+      button#btnPutUser Save User
+
+  h2 DELETE a user
+  p#deleteUserStatus
+  #deleteUser
+    input#input-uscid(type='text', placeholder='USCID')
+    button#btnDeleteUser Delete User
+
