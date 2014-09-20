@@ -6,12 +6,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // route setup
-var routes = require('./routes/index');
-var api = require('./routes/api');
+var routesViews = require('./routes/views');
+var routesPeople = require('./routes/people');
+var routesHousing = require('./routes/housing');
+var routesQuestions = require('./routes/questions');
+var routesEvents = require('./routes/events');
+var routesStories = require('./routes/stories');
+var routesDonations = require('./routes/donations');
 
 // database setup
 var mongo = require('mongoskin');
-var db = mongo.db("mongodb://localhost:27017/aisusc", {native_parser:true});
+var db = mongo.db("mongodb://localhost:27017/aisusc-db", {native_parser:true});
 
 var app = express();
 
@@ -32,8 +37,13 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/', routes);
-app.use('/api', api);
+app.use('/', routesViews);
+app.use('/api/donations', routesDonations);
+app.use('/api/events', routesEvents);
+app.use('/api/housing', routesHousing);
+app.use('/api/people', routesPeople);
+app.use('/api/questions', routesQuestions);
+app.use('/api/stories', routesStories);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
