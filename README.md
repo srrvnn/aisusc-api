@@ -3,12 +3,13 @@ aisusc.org
 
 Rewriting http://www.aisusc.org in MEAN.io
 
-To Run
-------
+Setup Instructions: 
 
-rm -rf node_modules
 
-npm cache clean
-npm install 
+1. git clone git@github.com:srrvnn/aisusc-api.git
 
-npm start
+2. Download and install Node.js and npm Package Manager.
+
+3. Download and install MongoDB. 
+
+
