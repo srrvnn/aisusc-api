@@ -13,9 +13,8 @@ Download and install MongoDB.
 
 ### To Run
 
-rm -rf node_modules
-
 npm cache clean
+
 npm install
 
 npm start
