@@ -13,8 +13,7 @@ Download and install MongoDB.
 
 ### To Run
 
-npm cache clean
+*from project root:*
 
-npm install
-
+mongod --dbpath data/
 npm start

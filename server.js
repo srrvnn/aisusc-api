@@ -12,7 +12,6 @@ var routesHousing = require('./routes/housing');
 var routesQuestions = require('./routes/questions');
 var routesEvents = require('./routes/events');
 var routesStories = require('./routes/stories');
-var routesDonations = require('./routes/donations');
 
 // database setup
 var mongo = require('mongoskin');
@@ -38,7 +37,6 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routesViews);
-app.use('/api/donations', routesDonations);
 app.use('/api/events', routesEvents);
 app.use('/api/housing', routesHousing);
 app.use('/api/people', routesPeople);
